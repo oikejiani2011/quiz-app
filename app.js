@@ -1,9 +1,9 @@
 const questions = [ 
-  { question: 'What color is broccoli?', answers: [ 'red', 'orange', 'pink', 'green' ], correctAnswer: 'green' }, 
-  { question: 'What is the current year?', answers: [ '1970', '2015', '2019', '2005' ], correctAnswer: '2019' }, 
-  { question: 'What is the current year?', answers: [ '1970', '2015', '2019', '2005' ], correctAnswer: '2019' }, 
-  { question: 'What is the current year?', answers: [ '1970', '2015', '2019', '2005' ], correctAnswer: '2019' }, 
-  { question: 'What is the current year?', answers: [ '1970', '2015', '2019', '2005' ], correctAnswer: '2019' } ];
+  { question: 'What color is broccoli?', answers: [ 'red', 'orange', 'pink', 'green' ], correctAnswer: 'green', qstno: '1/5'}, 
+  { question: 'What is the current year?', answers: [ '1970', '2015', '2020', '2005' ], correctAnswer: '2020', qstno: '2/5' }, 
+  { question: 'What is color is the sky at noon?', answers: [ 'black', 'blue', 'yellow', 'magenta' ], correctAnswer: 'blue', qstno: '3/5' }, 
+  { question: 'What disease is resposible for the current pandemic?', answers: [ 'HIV', 'SARS', 'COVID-19', 'malaria' ], correctAnswer: 'COVID-19', qstno: '4/5' }, 
+  { question: 'What is next year?', answers: [ '1970', '2015', '2021', '2005' ], correctAnswer: '2021', qstno: '5/5' } ];
 
 let currentQuestion = 0;
 
@@ -64,6 +64,7 @@ function submitQuiz()
      if(correctAnswer == selectedAnswer) 
      {
        alert("Correct!")
+       
      }
      else
      { 
