@@ -88,6 +88,7 @@ function nextQuestion()
   if(currentQuestion == questions.length)
   {
        alert("Quiz ends");
+       
    }
     renderCurrentQuestionAndAnswers(currentQuestion);
     currentQuestion++;
