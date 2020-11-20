@@ -11,20 +11,17 @@ const store = {
   questions: [{
     question: 'what color is broccoli?',
     answers: [ 'red', 'orange', 'pink', 'green', 'blue' ],
-    correctAnswer: 'green',
-   
+    correctAnswer: 'green', 
   },
   {
     question: 'what is the current year?',
     answers: [ '1970', '2015', '2020', '2005', '2000' ],
     correctAnswer: '2020',
-   
   },
   {
     question: 'What is color is the sky at noon?',
     answers: [ 'black', 'blue', 'yellow', 'magenta', 'grey' ],
-    correctAnswer: 'blue',
-    
+    correctAnswer: 'blue',  
   },
   {
     question: 'What disease is respossible for the current pandemic?',
@@ -70,7 +67,7 @@ function generateQuestionPage() {
     </form>
       <div class="quiz-info">
         <p>${store.questionNumber+1}/5</p>
-        <p>${store.score}/${store.questionNumber} Correct</p>
+        <p>${store.score}/5 Correct</p>
       </div>
   `;
   
