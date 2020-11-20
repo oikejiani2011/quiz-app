@@ -34,7 +34,7 @@ const store = {
   {
     question: 'What is next year?',
     answers: [ '1970', '2015', '2021', '2005', '2020' ],
-    correctAnswer: '2020', 
+    correctAnswer: '2021', 
   }
   ],
   feedbackGiven: true,
@@ -76,25 +76,7 @@ function generateQuestionPage() {
   
 }
 
-function generateFeedbackPage(){
-  let feedback = '';
-  if(store.currentAnswer===store.questions[store.questionNumber].correctAnswer){
-    feedback = `Great job! You're doing good!`;
-  } else{
-    feedback = `Better luck next time!`;
-  }
-  return`
-  <div class="mainPage">
-      <h2>Feedback Question ${store.questionNumber+1}</h2>
-      
-      <p>The correct answer was: ${store.questions[store.questionNumber].correctAnswer}.</p>
-      ${feedback}
-      <p>You have gotten ${store.score}/${store.questionNumber+1} questions right so far.</p>
-      <button type='submit' id="continue">Continue</button>
-      </form>
-    </div>
-    `;
-}
+
 
 function generateFinalPage(){
   let feedback = '';
@@ -105,14 +87,34 @@ function generateFinalPage(){
   }
   return`
   <div class="mainPage">
-      <h2>Feedback Question ${store.questionNumber+1}</h2>
+      <h2>Question ${store.questionNumber+1}</h2>
       <p>The correct answer was: ${store.questions[store.questionNumber].correctAnswer}.</p>
       ${feedback}
-      <p>You're all done!!<p>
-      <p>You got ${store.score}/${store.questionNumber+1} questions right.</p>
+      <p>End of the Quiz!<p>
+      <p>You scored ${store.score}/${store.questionNumber+1}</p>
       <button type='submit' id="home">Home</button>
       </form>
       <button type='submit' id="try-again">Try Again</button>
+      </form>
+    </div>
+    `;
+}
+
+function generateFeedbackPage(){
+  let feedback = '';
+  if(store.currentAnswer===store.questions[store.questionNumber].correctAnswer){
+    feedback = `Great job! You're doing good!`;
+  } else{
+    feedback = `Better luck next time!`;
+  }
+  return`
+  <div class="mainPage">
+      <h2>Question ${store.questionNumber+1}</h2>
+      
+      <p>The correct answer was: ${store.questions[store.questionNumber].correctAnswer}.</p>
+      ${feedback}
+      <p>You have gotten ${store.score}/${store.questionNumber+1} questions right so far.</p>
+      <button type='submit' id="continue">Continue</button>
       </form>
     </div>
     `;
